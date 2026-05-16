@@ -1,2 +1,3 @@
 # Cloudflare Pages redirects
+/contact-us /contact.html 200
 /* /404.html 404
