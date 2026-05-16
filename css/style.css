@@ -218,9 +218,9 @@ input[type="submit"]:hover {
 .page-hero h1 {
   margin: 0.9rem 0 1rem;
   font-size: clamp(2.6rem, 5vw, 4.9rem);
-  line-height: 0.98;
-  letter-spacing: -0.06em;
-  max-width: 12ch;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  max-width: 15ch;
 }
 
 .hero p,
@@ -494,8 +494,8 @@ input[type="submit"]:hover {
 
 .article-shell h1 {
   font-size: clamp(2.1rem, 4vw, 3.5rem);
-  line-height: 1.02;
-  letter-spacing: -0.05em;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 .article-shell h2 {
@@ -1154,6 +1154,10 @@ input[type="submit"]:hover {
 
   .pros-cons {
     grid-template-columns: 1fr;
+  }
+
+  .article-card img {
+    height: 140px;
   }
 
   .cookie-inner {
