@@ -1,19 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">AI image generator illustration</title>
-  <desc id="desc">Abstract gallery artwork for AI image generator reviews.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="108" y="100" width="240" height="430" rx="30" fill="#ffffff" opacity=".9"/>
-  <rect x="390" y="160" width="240" height="310" rx="30" fill="#dbeafe"/>
-  <rect x="672" y="120" width="420" height="390" rx="30" fill="#ffffff"/>
-  <circle cx="868" cy="250" r="82" fill="#60a5fa"/>
-  <path d="M754 430c72-122 128-183 167-183 31 0 67 41 110 125l61 58H754z" fill="#1d4ed8"/>
-  <text x="228" y="338" fill="#0f172a" font-size="44" font-family="Inter, Arial, sans-serif" text-anchor="middle">Top 10</text>
-  <text x="510" y="328" fill="#1d4ed8" font-size="44" font-family="Inter, Arial, sans-serif" text-anchor="middle">Free</text>
-  <text x="882" y="428" fill="#0f172a" font-size="42" font-family="Inter, Arial, sans-serif" text-anchor="middle">Reviewed</text>
+  <text x="600" y="65" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold" font-family="Arial, sans-serif">Free AI Image Generators — Quick Compare</text>
+  <rect x="60" y="100" width="255" height="290" rx="20" fill="#1e293b"/>
+  <rect x="60" y="100" width="255" height="100" rx="20" fill="#3b82f6"/>
+  <rect x="60" y="160" width="255" height="40" fill="#3b82f6"/>
+  <text x="187" y="150" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="Arial, sans-serif">DALL-E 3</text>
+  <text x="187" y="185" text-anchor="middle" fill="#bfdbfe" font-size="14" font-family="Arial, sans-serif">OpenAI</text>
+  <text x="80" y="240" fill="#ffffff" font-size="14" font-family="Arial, sans-serif">★★★★★ 4.9</text>
+  <text x="80" y="270" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">2 free images / month</text>
+  <text x="80" y="295" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Watermark: No</text>
+  <text x="80" y="320" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Commercial use: Yes</text>
+  <rect x="80" y="340" width="210" height="32" rx="16" fill="#3b82f6"/>
+  <text x="185" y="361" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Arial, sans-serif">Best quality</text>
+  <rect x="330" y="100" width="255" height="290" rx="20" fill="#1e293b"/>
+  <rect x="330" y="100" width="255" height="100" rx="20" fill="#10b981"/>
+  <rect x="330" y="160" width="255" height="40" fill="#10b981"/>
+  <text x="457" y="150" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Stable Diff.</text>
+  <text x="457" y="185" text-anchor="middle" fill="#a7f3d0" font-size="14" font-family="Arial, sans-serif">Stability AI</text>
+  <text x="350" y="240" fill="#ffffff" font-size="14" font-family="Arial, sans-serif">★★★★☆ 4.2</text>
+  <text x="350" y="270" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Unlimited (local)</text>
+  <text x="350" y="295" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Watermark: No</text>
+  <text x="350" y="320" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Commercial use: Yes</text>
+  <rect x="350" y="340" width="210" height="32" rx="16" fill="#10b981"/>
+  <text x="455" y="361" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Arial, sans-serif">Best value</text>
+  <rect x="600" y="100" width="255" height="290" rx="20" fill="#1e293b"/>
+  <rect x="600" y="100" width="255" height="100" rx="20" fill="#f59e0b"/>
+  <rect x="600" y="160" width="255" height="40" fill="#f59e0b"/>
+  <text x="727" y="150" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Midjourney</text>
+  <text x="727" y="185" text-anchor="middle" fill="#fde68a" font-size="14" font-family="Arial, sans-serif">Midjourney Inc.</text>
+  <text x="620" y="240" fill="#ffffff" font-size="14" font-family="Arial, sans-serif">★★★★★ 4.8</text>
+  <text x="620" y="270" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">~25 free trials</text>
+  <text x="620" y="295" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Watermark: Yes</text>
+  <text x="620" y="320" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Commercial use: No</text>
+  <rect x="620" y="340" width="210" height="32" rx="16" fill="#f59e0b"/>
+  <text x="725" y="361" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Arial, sans-serif">Most creative</text>
+  <rect x="870" y="100" width="255" height="290" rx="20" fill="#1e293b"/>
+  <rect x="870" y="100" width="255" height="100" rx="20" fill="#8b5cf6"/>
+  <rect x="870" y="160" width="255" height="40" fill="#8b5cf6"/>
+  <text x="997" y="150" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Adobe Firefly</text>
+  <text x="997" y="185" text-anchor="middle" fill="#ddd6fe" font-size="14" font-family="Arial, sans-serif">Adobe</text>
+  <text x="890" y="240" fill="#ffffff" font-size="14" font-family="Arial, sans-serif">★★★★☆ 4.3</text>
+  <text x="890" y="270" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">25 free / month</text>
+  <text x="890" y="295" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Watermark: No</text>
+  <text x="890" y="320" fill="#94a3b8" font-size="13" font-family="Arial, sans-serif">Commercial use: Yes</text>
+  <rect x="890" y="340" width="210" height="32" rx="16" fill="#8b5cf6"/>
+  <text x="995" y="361" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Arial, sans-serif">Safest choice</text>
+  <rect x="60" y="420" width="1065" height="80" rx="20" fill="#1e293b"/>
+  <text x="592" y="455" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Arial, sans-serif">Tip: Run the same prompt across 3 tools before deciding. Compare quality, speed, and commercial rights.</text>
+  <text x="592" y="480" text-anchor="middle" fill="#64748b" font-size="13" font-family="Arial, sans-serif">Sources updated May 2026. Free tiers subject to change.</text>
+  <rect x="60" y="520" width="1065" height="50" rx="16" fill="rgba(255,255,255,0.05)"/>
+  <text x="592" y="550" text-anchor="middle" fill="#64748b" font-size="13" font-family="Arial, sans-serif">See our full review for detailed comparison of all 10 free AI image generators →</text>
 </svg>

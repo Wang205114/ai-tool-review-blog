@@ -1,21 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">AI writing tools illustration</title>
-  <desc id="desc">Abstract editorial style graphic representing AI writing reviews.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#eff6ff"/>
       <stop offset="100%" stop-color="#dbeafe"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="80" y="74" width="1040" height="482" rx="36" fill="#ffffff"/>
-  <rect x="146" y="136" width="278" height="332" rx="24" fill="#2563eb"/>
-  <rect x="480" y="148" width="538" height="26" rx="13" fill="#bfdbfe"/>
-  <rect x="480" y="206" width="476" height="20" rx="10" fill="#cbd5e1"/>
-  <rect x="480" y="252" width="448" height="20" rx="10" fill="#cbd5e1"/>
-  <rect x="480" y="298" width="508" height="20" rx="10" fill="#cbd5e1"/>
-  <rect x="480" y="360" width="182" height="62" rx="20" fill="#0f172a"/>
-  <text x="240" y="274" fill="#ffffff" font-size="52" font-family="Inter, Arial, sans-serif" text-anchor="middle">AI</text>
-  <text x="240" y="334" fill="#ffffff" font-size="42" font-family="Inter, Arial, sans-serif" text-anchor="middle">Writing</text>
-  <text x="240" y="390" fill="#ffffff" font-size="42" font-family="Inter, Arial, sans-serif" text-anchor="middle">Reviews</text>
+  <rect x="80" y="60" width="1040" height="510" rx="36" fill="#ffffff"/>
+  <rect x="120" y="100" width="340" height="430" rx="20" fill="#f1f5f9"/>
+  <rect x="140" y="120" width="300" height="22" rx="11" fill="#2563eb"/>
+  <rect x="140" y="158" width="300" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="180" width="280" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="202" width="290" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="228" width="300" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="250" width="270" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="276" width="295" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="298" width="260" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="324" width="300" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="346" width="285" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="140" y="380" width="200" height="40" rx="20" fill="#2563eb"/>
+  <text x="240" y="407" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Arial, sans-serif">AI Writing Review</text>
+  <text x="140" y="450" fill="#0f172a" font-size="14" font-weight="bold" font-family="Arial, sans-serif">Feature Comparison</text>
+  <rect x="500" y="100" width="280" height="195" rx="20" fill="#f8fafc" stroke="#dbe5f4" stroke-width="1"/>
+  <rect x="520" y="120" width="50" height="50" rx="14" fill="#dbeafe"/>
+  <text x="545" y="152" text-anchor="middle" fill="#2563eb" font-size="24" font-weight="bold" font-family="Arial, sans-serif">T</text>
+  <text x="590" y="140" fill="#0f172a" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Templates</text>
+  <text x="520" y="168" fill="#52607a" font-size="13" font-family="Arial, sans-serif">Pre-built formats</text>
+  <rect x="800" y="100" width="280" height="195" rx="20" fill="#f8fafc" stroke="#dbe5f4" stroke-width="1"/>
+  <rect x="820" y="120" width="50" height="50" rx="14" fill="#fef3c7"/>
+  <text x="845" y="152" text-anchor="middle" fill="#f59e0b" font-size="24" font-weight="bold" font-family="Arial, sans-serif">$</text>
+  <text x="890" y="140" fill="#0f172a" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Pricing</text>
+  <text x="820" y="168" fill="#52607a" font-size="13" font-family="Arial, sans-serif">Compare plans</text>
+  <rect x="500" y="315" width="580" height="215" rx="20" fill="#f8fafc" stroke="#dbe5f4" stroke-width="1"/>
+  <text x="520" y="350" fill="#0f172a" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Writing Tools Comparison</text>
+  <rect x="520" y="365" width="120" height="30" rx="6" fill="#f1f5f9"/>
+  <rect x="655" y="365" width="100" height="30" rx="6" fill="#f1f5f9"/>
+  <rect x="770" y="365" width="100" height="30" rx="6" fill="#f1f5f9"/>
+  <rect x="885" y="365" width="100" height="30" rx="6" fill="#f1f5f9"/>
+  <text x="540" y="385" fill="#0f172a" font-size="12" font-weight="bold" font-family="Arial, sans-serif">Feature</text>
+  <text x="705" y="385" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold" font-family="Arial, sans-serif">ChatGPT</text>
+  <text x="820" y="385" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold" font-family="Arial, sans-serif">Claude</text>
+  <text x="935" y="385" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold" font-family="Arial, sans-serif">Jasper</text>
+  <text x="530" y="420" fill="#0f172a" font-size="13" font-family="Arial, sans-serif">Writing</text>
+  <text x="705" y="420" text-anchor="middle" fill="#2563eb" font-size="16" font-family="Arial, sans-serif">✓</text>
+  <text x="820" y="420" text-anchor="middle" fill="#f97316" font-size="16" font-family="Arial, sans-serif">✓✓</text>
+  <text x="935" y="420" text-anchor="middle" fill="#0f172a" font-size="16" font-family="Arial, sans-serif">✓</text>
+  <text x="530" y="445" fill="#0f172a" font-size="13" font-family="Arial, sans-serif">SEO</text>
+  <text x="705" y="445" text-anchor="middle" fill="#2563eb" font-size="16" font-family="Arial, sans-serif">✓</text>
+  <text x="820" y="445" text-anchor="middle" fill="#f97316" font-size="16" font-family="Arial, sans-serif">✓</text>
+  <text x="935" y="445" text-anchor="middle" fill="#0f172a" font-size="16" font-family="Arial, sans-serif">✓✓</text>
+  <rect x="530" y="475" width="200" height="36" rx="18" fill="#2563eb"/>
+  <text x="630" y="499" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Arial, sans-serif">See the full guide →</text>
 </svg>

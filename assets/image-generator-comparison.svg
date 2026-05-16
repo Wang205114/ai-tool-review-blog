@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" fill="none">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="780" height="420" rx="20" fill="#f8fbff"/>
+  <rect x="0" y="0" width="780" height="58" rx="20" fill="url(#hg)"/>
+  <rect x="0" y="30" width="780" height="28" fill="url(#hg)"/>
+  <text x="390" y="37" text-anchor="middle" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#fff">Free AI Image Generators — Pricing &amp; Limits</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="76" width="220" height="36" rx="8" fill="rgba(37,99,235,0.08)"/>
+  <rect x="260" y="76" width="120" height="36" rx="8" fill="rgba(37,99,235,0.08)"/>
+  <rect x="390" y="76" width="120" height="36" rx="8" fill="rgba(37,99,235,0.08)"/>
+  <rect x="520" y="76" width="120" height="36" rx="8" fill="rgba(37,99,235,0.08)"/>
+  <rect x="650" y="76" width="100" height="36" rx="8" fill="rgba(37,99,235,0.08)"/>
+
+  <text x="140" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Tool</text>
+  <text x="320" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Free Credits</text>
+  <text x="450" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Quality</text>
+  <text x="580" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Watermark</text>
+  <text x="700" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Comm.</text>
+
+  <!-- Row 1: DALL-E 3 -->
+  <text x="40" y="140" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">DALL-E 3 (OpenAI)</text>
+  <text x="320" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">2 free / month</text>
+  <text x="450" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★★★</text>
+  <text x="580" y="140" text-anchor="middle" font-size="16">✓</text>
+  <text x="700" y="140" text-anchor="middle" font-size="16">✓</text>
+  <line x1="30" y1="152" x2="750" y2="152" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="40" y="184" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Stable Diffusion</text>
+  <text x="320" y="184" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">Unlimited*</text>
+  <text x="450" y="184" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★★☆</text>
+  <text x="580" y="184" text-anchor="middle" font-size="16">—</text>
+  <text x="700" y="184" text-anchor="middle" font-size="16">✓</text>
+  <line x1="30" y1="196" x2="750" y2="196" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="40" y="228" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Midjourney</text>
+  <text x="320" y="228" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">~25 free</text>
+  <text x="450" y="228" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★★★</text>
+  <text x="580" y="228" text-anchor="middle" font-size="16">✓</text>
+  <text x="700" y="228" text-anchor="middle" font-size="16">—</text>
+  <line x1="30" y1="240" x2="750" y2="240" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="40" y="272" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Adobe Firefly</text>
+  <text x="320" y="272" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">25 / month</text>
+  <text x="450" y="272" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★★☆</text>
+  <text x="580" y="272" text-anchor="middle" font-size="16">✓</text>
+  <text x="700" y="272" text-anchor="middle" font-size="16">✓</text>
+  <line x1="30" y1="284" x2="750" y2="284" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="40" y="316" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Canva AI</text>
+  <text x="320" y="316" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">50 lifetime</text>
+  <text x="450" y="316" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★★☆</text>
+  <text x="580" y="316" text-anchor="middle" font-size="16">✓</text>
+  <text x="700" y="316" text-anchor="middle" font-size="16">✓</text>
+  <line x1="30" y1="328" x2="750" y2="328" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Row 6 -->
+  <text x="40" y="360" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Ideogram</text>
+  <text x="320" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">~100 / day</text>
+  <text x="450" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">★★★☆☆</text>
+  <text x="580" y="360" text-anchor="middle" font-size="16">✓</text>
+  <text x="700" y="360" text-anchor="middle" font-size="16">?</text>
+  <line x1="30" y1="372" x2="750" y2="372" stroke="#dbe5f4" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="40" y="402" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#52607a">* Requires local setup / GPU</text>
+</svg>
