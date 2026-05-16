@@ -421,53 +421,11 @@ input[type="submit"]:hover {
   transform: scale(1.3);
 }
 
-.newsletter,
-.cta-band {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-  color: #fff;
-  border-radius: 32px;
-  padding: 2rem;
-  box-shadow: var(--shadow);
-}
-
-.newsletter p,
-.cta-band p {
-  color: rgba(255, 255, 255, 0.82);
-}
-
 .split {
   display: grid;
   gap: 1.4rem;
 }
 
-.form-row {
-  display: grid;
-  gap: 1rem;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.45rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 0.95rem 1rem;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-}
-
-textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-
-.form-note,
 .muted {
   color: var(--muted);
 }
@@ -483,19 +441,6 @@ textarea {
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-
-.ad-slot {
-  min-height: 110px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  border: 1px dashed rgba(37, 99, 235, 0.4);
-  border-radius: 18px;
-  color: var(--muted);
-  background: var(--surface-alt);
-  padding: 1rem;
-  font-size: 0.95rem;
 }
 
 .page-hero {
@@ -570,39 +515,13 @@ textarea {
   padding-left: 1.2rem;
 }
 
-.author-box,
-.comment-box {
+.author-box {
   padding: 1.35rem;
 }
 
 .author-box strong {
   display: block;
   margin-bottom: 0.35rem;
-}
-
-.pagination {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 2rem;
-}
-
-.pagination a,
-.pagination span {
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  font-weight: 700;
-}
-
-.pagination .active {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
 }
 
 .site-footer {
@@ -639,11 +558,6 @@ textarea {
   border: 0;
 }
 
-.status-message {
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
 .empty-state {
   text-align: center;
   padding: 3rem 1.5rem;
@@ -664,9 +578,6 @@ textarea {
     grid-column: span 6;
   }
 
-  .form-row.two-up {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 980px) {
