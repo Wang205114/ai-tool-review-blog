@@ -6,7 +6,6 @@ const root = document.documentElement;
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const siteNav = document.querySelector("[data-site-nav]");
-const statusTargets = document.querySelectorAll("[data-status-target]");
 const yearTarget = document.querySelector("[data-current-year]");
 
 // =============================================
@@ -122,19 +121,6 @@ if (navToggle && siteNav) {
 // =============================================
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
-}
-
-// =============================================
-// Ad Status (pre-AdSense placeholder)
-// =============================================
-if (statusTargets.length) {
-  statusTargets.forEach((slot) => {
-    const adName = slot.getAttribute("data-ad-slot");
-    if (adName) {
-      // Once AdSense is approved, replace this with actual AdSense code
-      slot.textContent = `Ad · ` + adName;
-    }
-  });
 }
 
 // =============================================
