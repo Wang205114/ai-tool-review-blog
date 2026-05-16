@@ -13,7 +13,7 @@
   <rect width="400" height="220" fill="url(#cd3)"/>
   <!-- Hero background glow -->
   <circle cx="200" cy="80" r="130" fill="#3b82f6" opacity="0.06"/>
-  <!-- Bracket decoration */
+  <!-- Bracket decoration -->
   <text x="20" y="46" fill="#3b82f6" opacity="0.1" font-size="80" font-weight="100" font-family="monospace">{</text>
   <text x="360" y="46" fill="#3b82f6" opacity="0.1" font-size="80" font-weight="100" font-family="monospace">}</text>
   <!-- Huge main title — the hero -->
