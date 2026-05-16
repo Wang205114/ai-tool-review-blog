@@ -341,22 +341,37 @@ input[type="submit"]:hover {
 }
 
 .article-card.featured {
-  border-top-color: transparent;
-}
-
-.article-card.featured img + .card-copy {
-  border-top: none;
-}
-
-.article-card.featured {
   display: grid;
   align-items: stretch;
+  border-top: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article-card.featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="dark"] .article-card.featured:hover {
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+}
+
+.article-card.featured img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .article-card img {
   width: 100%;
-  height: 220px;
+  height: 160px;
   object-fit: cover;
+  display: block;
 }
 
 .card-copy {
@@ -444,7 +459,17 @@ input[type="submit"]:hover {
 }
 
 .page-hero {
-  padding: 3.6rem 0 2rem;
+  padding: 3.6rem 0 3rem;
+}
+
+.page-hero .hero-grid {
+  align-items: center;
+}
+
+.page-hero .figure-img {
+  margin: 0;
+  border: none;
+  background: transparent;
 }
 
 .breadcrumbs {
@@ -1005,7 +1030,7 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  z-index: 50;
+  z-index: 1000;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
@@ -1156,8 +1181,12 @@ input[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 
-  .article-card img {
+  .article-card.featured img {
     height: 140px;
+  }
+
+  .article-card img {
+    height: 110px;
   }
 
   .cookie-inner {
@@ -1167,5 +1196,29 @@ input[type="submit"]:hover {
 
   .cookie-actions {
     justify-content: flex-end;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    max-width: 100%;
+  }
+
+  .page-hero .hero-grid .figure-img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand span:last-child {
+    display: none;
+  }
+
+  .hero-grid {
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    gap: 1rem;
   }
 }
