@@ -1,4 +1,4 @@
 # Cloudflare Pages redirects
-/contact /contact.html 301
-/contact-us /contact.html 301
+# Note: Cloudflare auto-308 strips .html, so all targets use clean URLs
+/contact-us /contact 301
 /* /404.html 404
