@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="cbg-google-gemini-vs-chatgpt-vs-claude-best-ai-chatbot-in-2026" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a1a"/>
+      <stop offset="1" stop-color="#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#cbg-google-gemini-vs-chatgpt-vs-claude-best-ai-chatbot-in-2026)"/>
+  <text x="400" y="40" text-anchor="middle" fill="#f1f5f9" font-size="18" font-weight="800" font-family="system-ui">Overall Score Comparison</text>
+  <!-- Chart area -->
+  <line x1="80" y1="140" x2="80" y2="360" stroke="#334155" stroke-width="1"/>
+  <line x1="80" y1="360" x2="750" y2="360" stroke="#334155" stroke-width="1"/>
+  <!-- Grid lines -->
+  <line x1="80" y1="250" x2="750" y2="250" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="254" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">5</text>
+  <line x1="80" y1="195" x2="750" y2="195" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="199" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">7.5</text>
+  <text x="70" y="144" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">10</text>
+  <!-- Bars -->
+  <rect x="100" y="-69" width="120" rx="4" fill="#2563EB" height="209"/>
+  <text x="160" y="-77" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700" font-family="system-ui">9.5</text>
+  <rect x="250" y="-44" width="120" rx="4" fill="#2563EBBB" height="184"/>
+  <text x="310" y="-52" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700" font-family="system-ui">8.4</text>
+  <rect x="400" y="-3" width="120" rx="4" fill="#2563EB" height="143"/>
+  <text x="460" y="-11" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700" font-family="system-ui">6.5</text>
+  <text x="160" y="164" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui">Google Gemini</text>
+  <text x="310" y="164" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui">ChatGPT</text>
+  <text x="460" y="164" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui">Claude</text>
+
+  <!-- Footer -->
+  <text x="400" y="390" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui">Ratings based on feature analysis, pricing, and user feedback</text>
+</svg>

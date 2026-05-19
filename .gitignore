@@ -9,3 +9,6 @@ build
 
 # Logs
 *.log
+
+# Environment variables (API keys)
+.env
