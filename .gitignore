@@ -10,5 +10,9 @@ build
 # Logs
 *.log
 
+# Python cache
+__pycache__/
+*.pyc
+
 # Environment variables (API keys)
 .env
