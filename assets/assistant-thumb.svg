@@ -1,37 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <defs>
-    <linearGradient id="c1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0f172a"/>
-      <stop offset="0.5" stop-color="#1a1a2e"/>
-      <stop offset="1" stop-color="#0f172a"/>
-    </linearGradient>
-  </defs>
-  <rect width="400" height="220" fill="url(#c1)"/>
-  <circle cx="100" cy="110" r="100" fill="#10b981" opacity="0.06"/>
-  <circle cx="300" cy="110" r="100" fill="#8b5cf6" opacity="0.06"/>
-  <!-- Left: ChatGPT panel -->
-  <rect x="24" y="48" width="160" height="130" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5" opacity="0.9"/>
-  <rect x="40" y="64" width="30" height="10" rx="5" fill="#10b981"/>
-  <text x="76" y="73" fill="#10b981" font-size="10" font-weight="bold" font-family="system-ui" letter-spacing="1">CHATGPT</text>
-  <rect x="40" y="82" width="128" height="6" rx="3" fill="#475569"/>
-  <rect x="40" y="94" width="100" height="6" rx="3" fill="#334155"/>
-  <rect x="40" y="106" width="115" height="6" rx="3" fill="#475569"/>
-  <rect x="40" y="118" width="90" height="6" rx="3" fill="#334155"/>
-  <rect x="40" y="134" width="60" height="18" rx="9" fill="#10b981" opacity="0.15"/>
-  <text x="70" y="147" text-anchor="middle" fill="#10b981" font-size="9" font-weight="bold" font-family="system-ui">GPT-4o</text>
-  <!-- Center VS -->
-  <rect x="180" y="80" width="40" height="40" rx="10" fill="#f59e0b" opacity="0.15"/>
-  <text x="200" y="108" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="900" font-family="system-ui">VS</text>
-  <!-- Right: Claude panel -->
-  <rect x="216" y="48" width="160" height="130" rx="14" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5" opacity="0.9"/>
-  <rect x="232" y="64" width="30" height="10" rx="5" fill="#8b5cf6"/>
-  <text x="268" y="73" fill="#8b5cf6" font-size="10" font-weight="bold" font-family="system-ui" letter-spacing="1">CLAUDE</text>
-  <rect x="232" y="82" width="128" height="6" rx="3" fill="#475569"/>
-  <rect x="232" y="94" width="100" height="6" rx="3" fill="#334155"/>
-  <rect x="232" y="106" width="115" height="6" rx="3" fill="#475569"/>
-  <rect x="232" y="118" width="90" height="6" rx="3" fill="#334155"/>
-  <rect x="232" y="134" width="60" height="18" rx="9" fill="#8b5cf6" opacity="0.15"/>
-  <text x="262" y="147" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="bold" font-family="system-ui">Opus 4</text>
-  <!-- Bottom label -->
-  <text x="200" y="197" text-anchor="middle" fill="#475569" font-size="9" font-weight="700" font-family="system-ui" letter-spacing="2">AI ASSISTANT COMPARISON</text>
+  <rect width="400" height="220" fill="#eef2ff"/>
+  <circle cx="200" cy="90" r="100" fill="#2563EB" opacity="0.04"/>
+  <!-- Chat bubbles icon -->
+  <rect x="156" y="54" width="88" height="88" rx="14" fill="#eef2ff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="172" y="72" width="56" height="34" rx="8" fill="#2563EB" opacity="0.12"/>
+  <rect x="172" y="72" width="56" height="34" rx="8" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="200" y="94" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="700" font-family="system-ui">AI</text>
+  <rect x="178" y="106" width="44" height="20" rx="6" fill="#2563EB" opacity="0.08"/>
+  <rect x="178" y="106" width="44" height="20" rx="6" fill="none" stroke="#2563EB" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="200" y="120" text-anchor="middle" fill="#2563EB" font-size="9" font-weight="600" font-family="system-ui">Chat</text>
+  <!-- Category label -->
+  <text x="200" y="170" text-anchor="middle" fill="#2563EB" font-size="12" font-weight="700" font-family="system-ui" letter-spacing="2">AI ASSISTANTS</text>
+  <rect x="148" y="178" width="104" height="2" rx="1" fill="#2563EB" opacity="0.2"/>
 </svg>

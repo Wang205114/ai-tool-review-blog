@@ -1,36 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <defs>
-    <linearGradient id="vs2" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1a0808"/>
-      <stop offset="1" stop-color="#0f172a"/>
-    </linearGradient>
-  </defs>
-  <rect width="400" height="220" fill="url(#vs2)"/>
-  <!-- Spotlight effect -->
-  <ellipse cx="200" cy="60" rx="180" ry="80" fill="#ef4444" opacity="0.04"/>
-  <!-- Top: streaming/Broadway style decoration -->
-  <rect x="0" y="0" width="400" height="6" fill="#ef4444" opacity="0.6"/>
-  <rect x="0" y="214" width="400" height="6" fill="#ef4444" opacity="0.6"/>
-  <!-- Cinema curtain top hint -->
-  <path d="M0 0 Q100 30 200 0 Q300 30 400 0" fill="#ef4444" opacity="0.05"/>
-  <!-- Huge cinematic title -->
-  <text x="200" y="68" text-anchor="middle" fill="#f1f5f9" font-size="24" font-weight="900" font-family="system-ui" letter-spacing="-0.8">Best AI Video</text>
-  <text x="200" y="98" text-anchor="middle" fill="#f1f5f9" font-size="24" font-weight="900" font-family="system-ui" letter-spacing="-0.8">Generators 2026</text>
-  <!-- Red accent line -->
-  <rect x="130" y="108" width="140" height="3" rx="1.5" fill="#ef4444"/>
-  <!-- Play button icon - cinematic -->
-  <circle cx="200" cy="142" r="22" fill="#ef4444" opacity="0.9"/>
-  <polygon points="192,130 192,154 214,142" fill="#fff"/>
-  <!-- Tool logos row - like streaming service cast credits -->
-  <rect x="24" y="178" width="72" height="24" rx="12" fill="#fff" opacity="0.05"/>
-  <text x="60" y="195" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="700" font-family="system-ui">Sora</text>
-  <rect x="108" y="178" width="72" height="24" rx="12" fill="#fff" opacity="0.05"/>
-  <text x="144" y="195" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="700" font-family="system-ui">Runway</text>
-  <rect x="192" y="178" width="60" height="24" rx="12" fill="#fff" opacity="0.05"/>
-  <text x="222" y="195" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="700" font-family="system-ui">Pika</text>
-  <rect x="264" y="178" width="76" height="24" rx="12" fill="#fff" opacity="0.05"/>
-  <text x="302" y="195" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="700" font-family="system-ui">HeyGen</text>
-  <!-- NETFLIX-style top tag -->
-  <rect x="140" y="10" width="120" height="16" rx="8" fill="#ef4444" opacity="0.8"/>
-  <text x="200" y="22" text-anchor="middle" fill="#fff" font-size="8" font-weight="800" font-family="system-ui" letter-spacing="2">TOP PICKS</text>
+  <rect width="400" height="220" fill="#fff1f2"/>
+  <circle cx="200" cy="90" r="100" fill="#dc2626" opacity="0.04"/>
+  <!-- Video icon: play button -->
+  <rect x="156" y="54" width="88" height="88" rx="14" fill="#fff1f2" stroke="#dc2626" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="174" y="68" width="52" height="40" rx="8" fill="#dc2626" opacity="0.08" stroke="#dc2626" stroke-width="1.5" stroke-opacity="0.4"/>
+  <polygon points="188,76 188,100 206,88" fill="#dc2626" opacity="0.8"/>
+  <!-- Progress bars -->
+  <rect x="174" y="114" width="52" height="4" rx="2" fill="#dc2626" opacity="0.2"/>
+  <rect x="174" y="122" width="38" height="4" rx="2" fill="#dc2626" opacity="0.15"/>
+  <!-- Category label -->
+  <text x="200" y="170" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700" font-family="system-ui" letter-spacing="2">AI VIDEO</text>
+  <rect x="152" y="178" width="96" height="2" rx="1" fill="#dc2626" opacity="0.2"/>
 </svg>

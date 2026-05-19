@@ -47,35 +47,17 @@ def generate_thumb_svg(title: str, category: str, tools: list, filename: str) ->
         badge_x += max(60, len(tool)*8 + 16) + 6
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <defs>
-    <linearGradient id="bg-{filename}" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0a0a1a"/>
-      <stop offset="1" stop-color="#1a1a2e"/>
-    </linearGradient>
-    <linearGradient id="accent-{filename}" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="{color}"/>
-      <stop offset="1" stop-color="{color}" stop-opacity="0.7"/>
-    </linearGradient>
-  </defs>
-  <!-- Dark background -->
-  <rect width="400" height="220" fill="url(#bg-{filename})"/>
-  <!-- Subtle grid -->
-  <line x1="0" y1="55" x2="400" y2="55" stroke="#1e293b" stroke-width="0.5"/>
-  <line x1="0" y1="110" x2="400" y2="110" stroke="#1e293b" stroke-width="0.5"/>
-  <line x1="0" y1="165" x2="400" y2="165" stroke="#1e293b" stroke-width="0.5"/>
-  <!-- Brand header -->
-  <text x="200" y="30" text-anchor="middle" fill="{color}" font-size="9" font-weight="800" font-family="system-ui" letter-spacing="4">AI TOOL GUIDE</text>
-  <line x1="80" y1="38" x2="320" y2="38" stroke="{color}" stroke-width="0.5" opacity="0.4"/>
+  <!-- Light brand background -->
+  <rect width="400" height="220" fill="{light_color}"/>
+  <circle cx="200" cy="90" r="100" fill="{color}" opacity="0.04"/>
+  <!-- Icon area -->
+  <rect x="156" y="44" width="88" height="88" rx="14" fill="{light_color}" stroke="{color}" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="200" y="94" text-anchor="middle" fill="{color}" font-size="24" font-weight="700" font-family="system-ui">{category[:4]}</text>
   <!-- Title lines -->
-  <text x="24" y="78" fill="#f1f5f9" font-size="24" font-weight="900" font-family="system-ui" letter-spacing="-0.8">{line1}</text>
-  {('  <text x="24" y="110" fill="#f1f5f9" font-size="24" font-weight="900" font-family="system-ui" letter-spacing="-0.8">' + line2 + '</text>') if line2 else ''}
-  <!-- Accent underline -->
-  <rect x="24" y="{115 if line2 else 85}" width="80" height="3" rx="1.5" fill="url(#accent-{filename})"/>
-  <!-- Tool badges -->
-  {badges}
-  <!-- Decorative circle -->
-  <circle cx="340" cy="110" r="50" fill="{color}" opacity="0.04"/>
-  <text x="340" y="106" text-anchor="middle" fill="{color}" opacity="0.08" font-size="60" font-weight="900" font-family="system-ui">"</text>
+  <text x="200" y="166" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800" font-family="system-ui" letter-spacing="-0.3">{line1}</text>
+  {('  <text x="200" y="186" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800" font-family="system-ui" letter-spacing="-0.3">' + line2 + '</text>') if line2 else ''}
+  <!-- Brand footer -->
+  <text x="200" y="206" text-anchor="middle" fill="{color}" font-size="8" font-weight="700" font-family="system-ui" letter-spacing="2">KNOWAITOOL</text>
 </svg>"""
 
 
@@ -105,34 +87,28 @@ def generate_comparison_svg(title: str, category: str, tools: list, filename: st
         bar_color = color if i % 2 == 0 else (color + "BB")
 
         bars_html += f"""  <rect x="{x}" y="{chart_y - bar_h}" width="{bar_width}" rx="4" fill="{bar_color}" height="{bar_h}"/>
-  <text x="{x + bar_width // 2}" y="{chart_y - bar_h - 8}" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700" font-family="system-ui">{score:.1f}</text>
+  <text x="{x + bar_width // 2}" y="{chart_y - bar_h - 8}" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="700" font-family="system-ui">{score:.1f}</text>
 """
-        labels_html += f"""  <text x="{x + bar_width // 2}" y="{chart_y + 24}" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui">{tool}</text>
+        labels_html += f"""  <text x="{x + bar_width // 2}" y="{chart_y + 24}" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui">{tool}</text>
 """
         x += bar_width + gap
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
-  <defs>
-    <linearGradient id="cbg-{filename}" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0a0a1a"/>
-      <stop offset="1" stop-color="#1a1a2e"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="400" fill="url(#cbg-{filename})"/>
-  <text x="400" y="40" text-anchor="middle" fill="#f1f5f9" font-size="18" font-weight="800" font-family="system-ui">Overall Score Comparison</text>
+  <rect width="800" height="400" fill="#f8faff"/>
+  <text x="400" y="40" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="800" font-family="system-ui">Overall Score Comparison</text>
   <!-- Chart area -->
-  <line x1="80" y1="140" x2="80" y2="360" stroke="#334155" stroke-width="1"/>
-  <line x1="80" y1="360" x2="750" y2="360" stroke="#334155" stroke-width="1"/>
+  <line x1="80" y1="140" x2="80" y2="360" stroke="#dbe5f4" stroke-width="1"/>
+  <line x1="80" y1="360" x2="750" y2="360" stroke="#dbe5f4" stroke-width="1"/>
   <!-- Grid lines -->
-  <line x1="80" y1="250" x2="750" y2="250" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4,4"/>
-  <text x="70" y="254" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">5</text>
-  <line x1="80" y1="195" x2="750" y2="195" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4,4"/>
-  <text x="70" y="199" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">7.5</text>
-  <text x="70" y="144" text-anchor="end" fill="#64748b" font-size="10" font-family="system-ui">10</text>
+  <line x1="80" y1="250" x2="750" y2="250" stroke="#dbe5f4" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="254" text-anchor="end" fill="#94a3b8" font-size="10" font-family="system-ui">5</text>
+  <line x1="80" y1="195" x2="750" y2="195" stroke="#dbe5f4" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="199" text-anchor="end" fill="#94a3b8" font-size="10" font-family="system-ui">7.5</text>
+  <text x="70" y="144" text-anchor="end" fill="#94a3b8" font-size="10" font-family="system-ui">10</text>
   <!-- Bars -->
 {bars_html}{labels_html}
   <!-- Footer -->
-  <text x="400" y="390" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui">Ratings based on feature analysis, pricing, and user feedback</text>
+  <text x="400" y="390" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="system-ui">Ratings based on feature analysis, pricing, and user feedback</text>
 </svg>"""
 
 
@@ -176,26 +152,20 @@ def generate_pricing_svg(title: str, tools_with_prices: list, filename: str) -> 
             bar_w = 100
 
         bar_color = color if i % 2 == 0 else "#7C3AED"
-        row_bg = "#1e293b" if i % 2 == 0 else "transparent"
+        row_bg = "#f1f5f9" if i % 2 == 0 else "transparent"
 
         bars_html += f"""  <rect x="0" y="{y - 4}" width="800" height="{bar_h + 8}" fill="{row_bg}" rx="4"/>
-  <text x="{label_w - 12}" y="{y + bar_h // 2 + 4}" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="700" font-family="system-ui">{t['name']}</text>
+  <text x="{label_w - 12}" y="{y + bar_h // 2 + 4}" text-anchor="end" fill="#1e293b" font-size="13" font-weight="700" font-family="system-ui">{t['name']}</text>
   <rect x="{chart_start_x}" y="{y}" width="{bar_w}" height="{bar_h}" rx="4" fill="{bar_color}" opacity="0.85"/>
   <text x="{chart_start_x + 8}" y="{y + bar_h // 2 + 4}" fill="#ffffff" font-size="12" font-weight="700" font-family="system-ui">{paid}</text>
-  <text x="{chart_start_x + bar_w + 8}" y="{y + bar_h // 2 + 4}" fill="#94a3b8" font-size="10" font-family="system-ui">{'Free: ' + free_label if free_label else ''}</text>
+  <text x="{chart_start_x + bar_w + 8}" y="{y + bar_h // 2 + 4}" fill="#64748b" font-size="10" font-family="system-ui">{'Free: ' + free_label if free_label else ''}</text>
 """
         y += bar_h + gap + 8
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
-  <defs>
-    <linearGradient id="pbg-{filename}" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0a0a1a"/>
-      <stop offset="1" stop-color="#1a1a2e"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="400" fill="url(#pbg-{filename})"/>
-  <text x="400" y="36" text-anchor="middle" fill="#f1f5f9" font-size="18" font-weight="800" font-family="system-ui">Pricing Comparison</text>
-  <text x="400" y="54" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui">Monthly subscription costs for paid plans</text>
+  <rect width="800" height="400" fill="#f8faff"/>
+  <text x="400" y="36" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="800" font-family="system-ui">Pricing Comparison</text>
+  <text x="400" y="54" text-anchor="middle" fill="#64748b" font-size="11" font-family="system-ui">Monthly subscription costs for paid plans</text>
 {bars_html}</svg>"""
 
 

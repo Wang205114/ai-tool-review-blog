@@ -340,6 +340,31 @@ input[type="submit"]:hover {
   border-top: 4px solid var(--accent-soft);
 }
 
+.article-card.with-icon .card-copy {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.article-card.with-icon .cat-mini {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.article-card.with-icon .cat-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .article-card.with-icon .cat-mini {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .article-card.featured {
   display: grid;
   align-items: stretch;
@@ -416,9 +441,37 @@ input[type="submit"]:hover {
 
 .category-card {
   grid-column: span 12;
-  padding: 1.6rem;
+  padding: 1.25rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.category-card .cat-icon {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+
+.category-card .cat-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-card .cat-text h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.category-card .cat-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .category-card::after {
@@ -1210,8 +1263,13 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
-  .brand span:last-child {
-    display: none;
+  .category-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .category-card .cat-icon {
+    margin: 0 auto;
   }
 
   .hero-grid {
