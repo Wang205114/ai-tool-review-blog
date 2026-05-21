@@ -275,7 +275,7 @@ def build_full_html(article_body: str, topic: dict, today: str) -> str:
 <body>
   <header class="site-header">
     <div class="container nav-shell">
-      <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="175" height="40" style="display:block"></a>
+      <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="200" height="44" style="display:block"></a>
       <nav class="site-nav" data-site-nav aria-label="Primary navigation">
         <a href="/">Home</a>
         <a href="/category">Categories</a>
@@ -372,7 +372,7 @@ __RELATED_ARTICLES__          </div>
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="175" height="40" style="display:block"></a>
+        <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="200" height="44" style="display:block"></a>
         <p class="muted">Independent AI tool reviews, comparisons, and buying guides for readers who need clarity before they spend.</p>
       </div>
       <div class="footer-links">

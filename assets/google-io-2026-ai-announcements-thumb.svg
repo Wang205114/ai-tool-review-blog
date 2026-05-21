@@ -1,58 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
   <defs>
-    <linearGradient id="go1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f8fafc"/>
-      <stop offset="1" stop-color="#e2e8f0"/>
+    <linearGradient id="gm1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a1a"/>
+      <stop offset="1" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="gm2" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4285F4"/>
+      <stop offset="0.25" stop-color="#EA4335"/>
+      <stop offset="0.5" stop-color="#FBBC05"/>
+      <stop offset="0.75" stop-color="#34A853"/>
+    </linearGradient>
+    <linearGradient id="gm3" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EA4335"/>
+      <stop offset="0.5" stop-color="#FBBC05"/>
+      <stop offset="1" stop-color="#4285F4"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="220" fill="url(#go1)"/>
-  <!-- Google I/O stage backdrop -->
-  <rect x="16" y="24" width="368" height="128" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.25"/>
-  <!-- Stage top bar with Google colors -->
-  <rect x="16" y="24" width="368" height="6" rx="3" fill="#4285F4"/>
-  <rect x="16" y="24" width="92" height="6" rx="3" fill="#EA4335"/>
-  <rect x="184" y="24" width="92" height="6" rx="3" fill="#FBBC05"/>
-  <rect x="276" y="24" width="108" height="6" rx="3" fill="#34A853"/>
-  <!-- Three announcement cards -->
-  <!-- Card 1: Search dashboards -->
-  <rect x="30" y="42" width="110" height="100" rx="8" fill="#4285F4" opacity="0.05"/>
-  <rect x="30" y="42" width="110" height="22" rx="8" fill="#4285F4" opacity="0.1"/>
-  <rect x="38" y="46" width="14" height="14" rx="3" fill="#4285F4" opacity="0.3"/>
-  <text x="45" y="56" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="700" font-family="system-ui">G</text>
-  <text x="56" y="57" fill="#4285F4" font-size="8" font-weight="700" font-family="system-ui">Search</text>
-  <!-- Dashboard mini -->
-  <rect x="38" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#4285F4" stroke-width="0.5" stroke-opacity="0.3"/>
-  <rect x="42" y="74" width="20" height="6" rx="2" fill="#4285F4" opacity="0.15"/>
-  <rect x="66" y="74" width="20" height="6" rx="2" fill="#4285F4" opacity="0.08"/>
-  <rect x="42" y="84" width="86" height="2" rx="1" fill="#4285F4" opacity="0.08"/>
-  <text x="85" y="100" text-anchor="middle" fill="#4285F4" font-size="6" font-weight="600" font-family="system-ui">Persistent dashboards</text>
-  <!-- Card 2: Gemini Spark -->
-  <rect x="148" y="42" width="110" height="100" rx="8" fill="#34A853" opacity="0.05"/>
-  <rect x="148" y="42" width="110" height="22" rx="8" fill="#34A853" opacity="0.1"/>
-  <rect x="156" y="46" width="14" height="14" rx="3" fill="#34A853" opacity="0.3"/>
-  <text x="163" y="56" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="700" font-family="system-ui">✦</text>
-  <text x="174" y="57" fill="#34A853" font-size="8" font-weight="700" font-family="system-ui">Spark</text>
-  <rect x="156" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#34A853" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="203" y="78" text-anchor="middle" fill="#34A853" font-size="6" font-weight="600" font-family="system-ui">AI Agent</text>
-  <text x="203" y="88" text-anchor="middle" fill="#34A853" font-size="5" font-weight="400" font-family="system-ui">24/7 personal</text>
-  <rect x="156" y="100" width="94" height="14" rx="4" fill="#34A853" opacity="0.08"/>
-  <text x="203" y="110" text-anchor="middle" fill="#34A853" font-size="6" font-weight="600" font-family="system-ui">Always on</text>
-  <!-- Card 3: Google Pics -->
-  <rect x="266" y="42" width="110" height="100" rx="8" fill="#FBBC05" opacity="0.05"/>
-  <rect x="266" y="42" width="110" height="22" rx="8" fill="#FBBC05" opacity="0.1"/>
-  <rect x="274" y="46" width="14" height="14" rx="3" fill="#FBBC05" opacity="0.3"/>
-  <text x="281" y="56" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="700" font-family="system-ui">P</text>
-  <text x="292" y="57" fill="#d97706" font-size="8" font-weight="700" font-family="system-ui">Pics</text>
-  <rect x="274" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#FBBC05" stroke-width="0.5" stroke-opacity="0.3"/>
-  <rect x="282" y="75" width="20" height="14" rx="3" fill="#FBBC05" opacity="0.08"/>
-  <polygon points="288,80 288,84 294,82" fill="#d97706" opacity="0.6"/>
-  <text x="310" y="86" fill="#d97706" font-size="6" font-weight="600" font-family="system-ui">Nano Banana</text>
-  <rect x="274" y="100" width="94" height="14" rx="4" fill="#FBBC05" opacity="0.08"/>
-  <text x="321" y="110" text-anchor="middle" fill="#d97706" font-size="6" font-weight="600" font-family="system-ui">AI images</text>
-  <!-- "I/O 2026" badge -->
-  <rect x="140" y="158" width="120" height="24" rx="12" fill="#4285F4" opacity="0.1"/>
-  <text x="200" y="174" text-anchor="middle" fill="#4285F4" font-size="11" font-weight="800" font-family="system-ui" letter-spacing="2">I/O 2026</text>
-  <!-- Bottom caption -->
-  <rect x="280" y="196" width="108" height="16" rx="8" fill="#64748b" opacity="0.1"/>
-  <text x="334" y="208" text-anchor="middle" fill="#64748b" font-size="8" font-weight="700" font-family="system-ui" letter-spacing="1">AI PRODUCTIVITY</text>
+  <!-- Dark editorial background -->
+  <rect width="400" height="220" fill="url(#gm1)"/>
+  <!-- Multi-color Google-inspired spotlight glows -->
+  <ellipse cx="200" cy="60" rx="180" ry="80" fill="#4285F4" opacity="0.05"/>
+  <ellipse cx="120" cy="50" rx="120" ry="70" fill="#EA4335" opacity="0.04"/>
+  <ellipse cx="280" cy="50" rx="120" ry="70" fill="#FBBC05" opacity="0.04"/>
+  <ellipse cx="200" cy="90" rx="160" ry="60" fill="#34A853" opacity="0.04"/>
+  <!-- Google 4-color decorative dots cluster top-right -->
+  <circle cx="340" cy="22" r="5" fill="#4285F4" opacity="0.5"/>
+  <circle cx="358" cy="22" r="5" fill="#EA4335" opacity="0.5"/>
+  <circle cx="376" cy="22" r="5" fill="#FBBC05" opacity="0.5"/>
+  <circle cx="340" cy="40" r="5" fill="#34A853" opacity="0.5"/>
+  <circle cx="358" cy="40" r="5" fill="#4285F4" opacity="0.3"/>
+  <circle cx="376" cy="40" r="5" fill="#EA4335" opacity="0.3"/>
+  <circle cx="340" cy="58" r="5" fill="#FBBC05" opacity="0.3"/>
+  <circle cx="358" cy="58" r="5" fill="#34A853" opacity="0.2"/>
+  <circle cx="376" cy="58" r="5" fill="#4285F4" opacity="0.2"/>
+  <!-- Masthead -->
+  <text x="200" y="28" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="800" font-family="system-ui" letter-spacing="4">KNOWAITOOL</text>
+  <line x1="80" y1="36" x2="320" y2="36" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+  <!-- Big main headline -->
+  <text x="24" y="78" fill="#f1f5f9" font-size="32" font-weight="900" font-family="system-ui" letter-spacing="-1">Google I/O</text>
+  <text x="24" y="108" fill="#f1f5f9" font-size="32" font-weight="900" font-family="system-ui" letter-spacing="-1">2026</text>
+  <!-- Multi-color accent bar (Google colors) -->
+  <rect x="24" y="118" width="200" height="4" rx="2" fill="url(#gm2)"/>
+  <!-- Subtitle -->
+  <text x="24" y="144" fill="#94a3b8" font-size="11" font-weight="600" font-family="system-ui">3 biggest AI announcements</text>
+  <text x="24" y="160" fill="#94a3b8" font-size="11" font-weight="600" font-family="system-ui">and what they mean for you</text>
+  <!-- 3 announcement badges row -->
+  <rect x="24" y="174" width="100" height="20" rx="10" fill="#4285F4" opacity="0.12"/>
+  <text x="74" y="188" text-anchor="middle" fill="#7baaf7" font-size="8" font-weight="700" font-family="system-ui">Search Dashboards</text>
+  <rect x="132" y="174" width="88" height="20" rx="10" fill="#EA4335" opacity="0.12"/>
+  <text x="176" y="188" text-anchor="middle" fill="#fca5a5" font-size="8" font-weight="700" font-family="system-ui">Gemini Spark</text>
+  <rect x="228" y="174" width="84" height="20" rx="10" fill="#34A853" opacity="0.12"/>
+  <text x="270" y="188" text-anchor="middle" fill="#6bc47f" font-size="8" font-weight="700" font-family="system-ui">Google Pics</text>
+  <!-- Bottom info bar -->
+  <rect x="24" y="198" width="88" height="18" rx="9" fill="#f59e0b" opacity="0.12"/>
+  <text x="68" y="211" text-anchor="middle" fill="#f59e0b" font-size="8" font-weight="700" font-family="system-ui">NEWS ANALYSIS</text>
+  <rect x="120" y="198" width="68" height="18" rx="9" fill="#3b82f6" opacity="0.12"/>
+  <text x="154" y="211" text-anchor="middle" fill="#60a5fa" font-size="8" font-weight="700" font-family="system-ui">8 min read</text>
+  <!-- Right side decorative rings — Google-color concentric circles -->
+  <circle cx="340" cy="85" r="50" fill="none" stroke="#4285F4" stroke-width="1" opacity="0.08"/>
+  <circle cx="340" cy="85" r="36" fill="none" stroke="#EA4335" stroke-width="1" opacity="0.06"/>
+  <circle cx="340" cy="85" r="22" fill="none" stroke="#FBBC05" stroke-width="1" opacity="0.06"/>
+  <circle cx="340" cy="85" r="8" fill="none" stroke="#34A853" stroke-width="1" opacity="0.06"/>
 </svg>
