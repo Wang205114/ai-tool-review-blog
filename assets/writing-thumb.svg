@@ -1,15 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <rect width="400" height="220" fill="#eff6ff"/>
-  <circle cx="200" cy="90" r="100" fill="#2563EB" opacity="0.04"/>
-  <!-- Writing icon: stacked lines + W circle -->
-  <rect x="156" y="54" width="88" height="88" rx="14" fill="#eff6ff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
-  <rect x="172" y="74" width="56" height="5" rx="2.5" fill="#2563EB" opacity="0.3"/>
-  <rect x="172" y="84" width="48" height="5" rx="2.5" fill="#2563EB" opacity="0.5"/>
-  <rect x="172" y="94" width="52" height="5" rx="2.5" fill="#2563EB" opacity="0.7"/>
-  <rect x="172" y="104" width="40" height="5" rx="2.5" fill="#2563EB"/>
-  <circle cx="200" cy="64" r="10" fill="#2563EB"/>
-  <text x="200" y="68" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">W</text>
-  <!-- Category label -->
-  <text x="200" y="170" text-anchor="middle" fill="#2563EB" font-size="12" font-weight="700" font-family="system-ui" letter-spacing="2">AI WRITING</text>
-  <rect x="160" y="178" width="80" height="2" rx="1" fill="#2563EB" opacity="0.2"/>
+  <defs>
+    <linearGradient id="wb1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eff6ff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#wb1)"/>
+  <!-- Document icon -->
+  <rect x="44" y="40" width="120" height="152" rx="10" fill="#ffffff" stroke="#2563EB" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect x="60" y="60" width="88" height="6" rx="3" fill="#2563EB" opacity="0.2"/>
+  <rect x="60" y="74" width="88" height="6" rx="3" fill="#2563EB" opacity="0.35"/>
+  <rect x="60" y="88" width="70" height="6" rx="3" fill="#2563EB" opacity="0.5"/>
+  <rect x="60" y="106" width="88" height="6" rx="3" fill="#2563EB" opacity="0.2"/>
+  <rect x="60" y="120" width="60" height="6" rx="3" fill="#2563EB" opacity="0.35"/>
+  <rect x="60" y="134" width="80" height="6" rx="3" fill="#2563EB" opacity="0.2"/>
+  <rect x="60" y="152" width="40" height="18" rx="9" fill="#2563EB" opacity="0.1"/>
+  <text x="80" y="165" text-anchor="middle" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui">DRAFT</text>
+  <!-- Pen icon on right side of doc -->
+  <rect x="120" y="164" width="24" height="24" rx="6" fill="#2563EB" opacity="0.12"/>
+  <text x="132" y="180" text-anchor="middle" fill="#2563EB" font-size="12" font-weight="700" font-family="system-ui">✎</text>
+  <!-- Tool badges on right -->
+  <rect x="196" y="52" width="170" height="30" rx="8" fill="#ffffff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="202" y="62" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui" opacity="0.6">TOOL</text>
+  <text x="202" y="76" fill="#1e293b" font-size="11" font-weight="700" font-family="system-ui">Jasper AI</text>
+  <rect x="196" y="88" width="170" height="30" rx="8" fill="#ffffff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="202" y="98" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui" opacity="0.6">TOOL</text>
+  <text x="202" y="112" fill="#1e293b" font-size="11" font-weight="700" font-family="system-ui">Copy.ai</text>
+  <rect x="196" y="124" width="170" height="30" rx="8" fill="#ffffff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="202" y="134" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui" opacity="0.6">TOOL</text>
+  <text x="202" y="148" fill="#1e293b" font-size="11" font-weight="700" font-family="system-ui">Grammarly</text>
+  <rect x="196" y="160" width="170" height="30" rx="8" fill="#ffffff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="202" y="170" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui" opacity="0.6">TOOL</text>
+  <text x="202" y="184" fill="#1e293b" font-size="11" font-weight="700" font-family="system-ui">Writesonic</text>
+  <!-- Category tag -->
+  <rect x="280" y="196" width="100" height="16" rx="8" fill="#2563EB" opacity="0.1"/>
+  <text x="330" y="208" text-anchor="middle" fill="#2563EB" font-size="8" font-weight="700" font-family="system-ui" letter-spacing="1">AI WRITING</text>
 </svg>

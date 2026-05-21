@@ -1,13 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <!-- Light brand background -->
-  <rect width="400" height="220" fill="#D9770633"/>
-  <circle cx="200" cy="90" r="100" fill="#D97706" opacity="0.04"/>
-  <!-- Icon area -->
-  <rect x="156" y="44" width="88" height="88" rx="14" fill="#D9770633" stroke="#D97706" stroke-width="1" stroke-opacity="0.2"/>
-  <text x="200" y="94" text-anchor="middle" fill="#D97706" font-size="24" font-weight="700" font-family="system-ui">AI P</text>
-  <!-- Title lines -->
-  <text x="200" y="166" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800" font-family="system-ui" letter-spacing="-0.3">Google I/O 2026: Every AI</text>
-    <text x="200" y="186" text-anchor="middle" fill="#1e293b" font-size="16" font-weight="800" font-family="system-ui" letter-spacing="-0.3">Announcement That Changes Your Workflow</text>
-  <!-- Brand footer -->
-  <text x="200" y="206" text-anchor="middle" fill="#D97706" font-size="8" font-weight="700" font-family="system-ui" letter-spacing="2">KNOWAITOOL</text>
+  <defs>
+    <linearGradient id="go1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#go1)"/>
+  <!-- Google I/O stage backdrop -->
+  <rect x="16" y="24" width="368" height="128" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.25"/>
+  <!-- Stage top bar with Google colors -->
+  <rect x="16" y="24" width="368" height="6" rx="3" fill="#4285F4"/>
+  <rect x="16" y="24" width="92" height="6" rx="3" fill="#EA4335"/>
+  <rect x="184" y="24" width="92" height="6" rx="3" fill="#FBBC05"/>
+  <rect x="276" y="24" width="108" height="6" rx="3" fill="#34A853"/>
+  <!-- Three announcement cards -->
+  <!-- Card 1: Search dashboards -->
+  <rect x="30" y="42" width="110" height="100" rx="8" fill="#4285F4" opacity="0.05"/>
+  <rect x="30" y="42" width="110" height="22" rx="8" fill="#4285F4" opacity="0.1"/>
+  <rect x="38" y="46" width="14" height="14" rx="3" fill="#4285F4" opacity="0.3"/>
+  <text x="45" y="56" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="700" font-family="system-ui">G</text>
+  <text x="56" y="57" fill="#4285F4" font-size="8" font-weight="700" font-family="system-ui">Search</text>
+  <!-- Dashboard mini -->
+  <rect x="38" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#4285F4" stroke-width="0.5" stroke-opacity="0.3"/>
+  <rect x="42" y="74" width="20" height="6" rx="2" fill="#4285F4" opacity="0.15"/>
+  <rect x="66" y="74" width="20" height="6" rx="2" fill="#4285F4" opacity="0.08"/>
+  <rect x="42" y="84" width="86" height="2" rx="1" fill="#4285F4" opacity="0.08"/>
+  <text x="85" y="100" text-anchor="middle" fill="#4285F4" font-size="6" font-weight="600" font-family="system-ui">Persistent dashboards</text>
+  <!-- Card 2: Gemini Spark -->
+  <rect x="148" y="42" width="110" height="100" rx="8" fill="#34A853" opacity="0.05"/>
+  <rect x="148" y="42" width="110" height="22" rx="8" fill="#34A853" opacity="0.1"/>
+  <rect x="156" y="46" width="14" height="14" rx="3" fill="#34A853" opacity="0.3"/>
+  <text x="163" y="56" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="700" font-family="system-ui">✦</text>
+  <text x="174" y="57" fill="#34A853" font-size="8" font-weight="700" font-family="system-ui">Spark</text>
+  <rect x="156" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#34A853" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="203" y="78" text-anchor="middle" fill="#34A853" font-size="6" font-weight="600" font-family="system-ui">AI Agent</text>
+  <text x="203" y="88" text-anchor="middle" fill="#34A853" font-size="5" font-weight="400" font-family="system-ui">24/7 personal</text>
+  <rect x="156" y="100" width="94" height="14" rx="4" fill="#34A853" opacity="0.08"/>
+  <text x="203" y="110" text-anchor="middle" fill="#34A853" font-size="6" font-weight="600" font-family="system-ui">Always on</text>
+  <!-- Card 3: Google Pics -->
+  <rect x="266" y="42" width="110" height="100" rx="8" fill="#FBBC05" opacity="0.05"/>
+  <rect x="266" y="42" width="110" height="22" rx="8" fill="#FBBC05" opacity="0.1"/>
+  <rect x="274" y="46" width="14" height="14" rx="3" fill="#FBBC05" opacity="0.3"/>
+  <text x="281" y="56" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="700" font-family="system-ui">P</text>
+  <text x="292" y="57" fill="#d97706" font-size="8" font-weight="700" font-family="system-ui">Pics</text>
+  <rect x="274" y="70" width="94" height="24" rx="4" fill="#ffffff" stroke="#FBBC05" stroke-width="0.5" stroke-opacity="0.3"/>
+  <rect x="282" y="75" width="20" height="14" rx="3" fill="#FBBC05" opacity="0.08"/>
+  <polygon points="288,80 288,84 294,82" fill="#d97706" opacity="0.6"/>
+  <text x="310" y="86" fill="#d97706" font-size="6" font-weight="600" font-family="system-ui">Nano Banana</text>
+  <rect x="274" y="100" width="94" height="14" rx="4" fill="#FBBC05" opacity="0.08"/>
+  <text x="321" y="110" text-anchor="middle" fill="#d97706" font-size="6" font-weight="600" font-family="system-ui">AI images</text>
+  <!-- "I/O 2026" badge -->
+  <rect x="140" y="158" width="120" height="24" rx="12" fill="#4285F4" opacity="0.1"/>
+  <text x="200" y="174" text-anchor="middle" fill="#4285F4" font-size="11" font-weight="800" font-family="system-ui" letter-spacing="2">I/O 2026</text>
+  <!-- Bottom caption -->
+  <rect x="280" y="196" width="108" height="16" rx="8" fill="#64748b" opacity="0.1"/>
+  <text x="334" y="208" text-anchor="middle" fill="#64748b" font-size="8" font-weight="700" font-family="system-ui" letter-spacing="1">AI PRODUCTIVITY</text>
 </svg>

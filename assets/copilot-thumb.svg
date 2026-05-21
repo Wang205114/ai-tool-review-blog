@@ -1,14 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <rect width="400" height="220" fill="#f0fdf4"/>
-  <circle cx="200" cy="90" r="100" fill="#059669" opacity="0.04"/>
-  <!-- Coding icon: </> brackets -->
-  <rect x="156" y="54" width="88" height="88" rx="14" fill="#f0fdf4" stroke="#059669" stroke-width="1" stroke-opacity="0.2"/>
-  <text x="188" y="100" font-family="monospace" font-size="28" fill="#059669" opacity="0.8" font-weight="bold">&lt;/&gt;</text>
+  <defs>
+    <linearGradient id="cp1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0fdf4"/>
+      <stop offset="1" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#cp1)"/>
+  <!-- Code editor window -->
+  <rect x="24" y="30" width="355" height="165" rx="10" fill="#1e293b" stroke="#059669" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- Editor title bar -->
+  <rect x="24" y="30" width="355" height="30" rx="10" fill="#0f172a"/>
+  <rect x="24" y="50" width="355" height="10" fill="#0f172a"/>
+  <!-- Window dots -->
+  <circle cx="44" cy="45" r="5" fill="#dc2626" opacity="0.8"/>
+  <circle cx="60" cy="45" r="5" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="76" cy="45" r="5" fill="#10b981" opacity="0.8"/>
+  <!-- Editor tab -->
+  <rect x="96" y="36" width="80" height="18" rx="4" fill="#059669" opacity="0.2"/>
+  <text x="136" y="49" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600" font-family="monospace">app.py</text>
   <!-- Code lines -->
-  <rect x="172" y="108" width="56" height="4" rx="2" fill="#059669" opacity="0.2"/>
-  <rect x="178" y="116" width="44" height="4" rx="2" fill="#059669" opacity="0.35"/>
-  <rect x="172" y="124" width="50" height="4" rx="2" fill="#059669" opacity="0.2"/>
-  <!-- Category label -->
-  <text x="200" y="170" text-anchor="middle" fill="#059669" font-size="12" font-weight="700" font-family="system-ui" letter-spacing="2">AI CODING</text>
-  <rect x="148" y="178" width="104" height="2" rx="1" fill="#059669" opacity="0.2"/>
+  <text x="40" y="80" fill="#64748b" font-size="8" font-family="monospace">1</text>
+  <text x="40" y="92" fill="#64748b" font-size="8" font-family="monospace">2</text>
+  <text x="40" y="104" fill="#64748b" font-size="8" font-family="monospace">3</text>
+  <text x="40" y="116" fill="#64748b" font-size="8" font-family="monospace">4</text>
+  <text x="40" y="128" fill="#64748b" font-size="8" font-family="monospace">5</text>
+  <text x="40" y="140" fill="#64748b" font-size="8" font-family="monospace">6</text>
+  <text x="40" y="152" fill="#64748b" font-size="8" font-family="monospace">7</text>
+  <!-- Code content -->
+  <text x="60" y="80" fill="#38bdf8" font-size="8" font-family="monospace">import openai</text>
+  <text x="60" y="92" fill="#f472b6" font-size="8" font-family="monospace">def</text>
+  <text x="76" y="92" fill="#facc15" font-size="8" font-family="monospace">generate</text>
+  <text x="116" y="92" fill="#ffffff" font-size="8" font-family="monospace">(prompt):</text>
+  <text x="76" y="104" fill="#34d399" font-size="8" font-family="monospace">result = openai.create</text>
+  <text x="76" y="116" fill="#34d399" font-size="8" font-family="monospace">print</text>
+  <text x="100" y="116" fill="#facc15" font-size="8" font-family="monospace">(f</text>
+  <text x="108" y="116" fill="#a78bfa" font-size="8" font-family="monospace">\"Result:</text>
+  <text x="148" y="116" fill="#a78bfa" font-size="8" font-family="monospace">{result}\"</text>
+  <text x="176" y="116" fill="#facc15" font-size="8" font-family="monospace">)</text>
+  <!-- Inline Copilot suggestion (ghost text) -->
+  <rect x="60" y="128" width="200" height="16" rx="4" fill="#059669" opacity="0.08"/>
+  <text x="70" y="140" fill="#059669" font-size="8" font-family="monospace" font-style="italic"># Copilot: handle errors</text>
+  <!-- Copilot badge -->
+  <rect x="280" y="160" width="80" height="20" rx="10" fill="#059669" opacity="0.12"/>
+  <text x="320" y="174" text-anchor="middle" fill="#059669" font-size="8" font-weight="700" font-family="system-ui">Copilot ✦</text>
+  <!-- Rating badge -->
+  <rect x="34" y="170" width="90" height="16" rx="8" fill="#f59e0b" opacity="0.12"/>
+  <text x="79" y="182" text-anchor="middle" fill="#d97706" font-size="8" font-weight="700" font-family="system-ui">$10/month?</text>
 </svg>

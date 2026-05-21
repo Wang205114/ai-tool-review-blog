@@ -1,15 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" fill="none">
-  <rect width="400" height="220" fill="#eef2ff"/>
-  <circle cx="200" cy="90" r="100" fill="#2563EB" opacity="0.04"/>
-  <!-- Chat bubbles icon -->
-  <rect x="156" y="54" width="88" height="88" rx="14" fill="#eef2ff" stroke="#2563EB" stroke-width="1" stroke-opacity="0.2"/>
-  <rect x="172" y="72" width="56" height="34" rx="8" fill="#2563EB" opacity="0.12"/>
-  <rect x="172" y="72" width="56" height="34" rx="8" fill="none" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="200" y="94" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="700" font-family="system-ui">AI</text>
-  <rect x="178" y="106" width="44" height="20" rx="6" fill="#2563EB" opacity="0.08"/>
-  <rect x="178" y="106" width="44" height="20" rx="6" fill="none" stroke="#2563EB" stroke-width="1" stroke-opacity="0.4"/>
-  <text x="200" y="120" text-anchor="middle" fill="#2563EB" font-size="9" font-weight="600" font-family="system-ui">Chat</text>
-  <!-- Category label -->
-  <text x="200" y="170" text-anchor="middle" fill="#2563EB" font-size="12" font-weight="700" font-family="system-ui" letter-spacing="2">AI ASSISTANTS</text>
-  <rect x="148" y="178" width="104" height="2" rx="1" fill="#2563EB" opacity="0.2"/>
+  <defs>
+    <linearGradient id="cb1" x1="0" y1="0" x2="400" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0fdf4"/>
+      <stop offset="0.5" stop-color="#faf5ff"/>
+      <stop offset="1" stop-color="#faf5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#cb1)"/>
+  <!-- Left: ChatGPT panel -->
+  <rect x="20" y="36" width="160" height="150" rx="14" fill="#ffffff" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="20" y="36" width="160" height="36" rx="14" fill="#10b981" opacity="0.08"/>
+  <rect x="34" y="46" width="20" height="16" rx="6" fill="#10b981" opacity="0.3"/>
+  <text x="44" y="58" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700" font-family="system-ui">G</text>
+  <text x="60" y="58" fill="#10b981" font-size="10" font-weight="800" font-family="system-ui">ChatGPT</text>
+  <text x="158" y="58" text-anchor="end" fill="#10b981" font-size="7" font-weight="700" font-family="system-ui" opacity="0.6">GPT-4o</text>
+  <!-- Chat bubbles in ChatGPT panel -->
+  <rect x="34" y="82" width="120" height="16" rx="8" fill="#10b981" opacity="0.08"/>
+  <rect x="34" y="104" width="100" height="16" rx="8" fill="#10b981" opacity="0.08"/>
+  <rect x="34" y="126" width="130" height="16" rx="8" fill="#10b981" opacity="0.08"/>
+  <rect x="66" y="152" width="100" height="16" rx="8" fill="#10b981" opacity="0.15"/>
+  <!-- Center VS badge -->
+  <circle cx="200" cy="110" r="24" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="200" y="115" text-anchor="middle" fill="#6366f1" font-size="14" font-weight="900" font-family="system-ui">VS</text>
+  <!-- Right: Claude panel -->
+  <rect x="220" y="36" width="160" height="150" rx="14" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="220" y="36" width="160" height="36" rx="14" fill="#8b5cf6" opacity="0.08"/>
+  <rect x="234" y="46" width="20" height="16" rx="6" fill="#8b5cf6" opacity="0.3"/>
+  <text x="244" y="58" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700" font-family="system-ui">C</text>
+  <text x="260" y="58" fill="#8b5cf6" font-size="10" font-weight="800" font-family="system-ui">Claude</text>
+  <text x="358" y="58" text-anchor="end" fill="#8b5cf6" font-size="7" font-weight="700" font-family="system-ui" opacity="0.6">Opus 4</text>
+  <!-- Chat bubbles in Claude panel -->
+  <rect x="234" y="82" width="110" height="16" rx="8" fill="#8b5cf6" opacity="0.08"/>
+  <rect x="234" y="104" width="130" height="16" rx="8" fill="#8b5cf6" opacity="0.08"/>
+  <rect x="234" y="126" width="90" height="16" rx="8" fill="#8b5cf6" opacity="0.15"/>
+  <rect x="234" y="152" width="115" height="16" rx="8" fill="#8b5cf6" opacity="0.08"/>
+  <!-- Bottom: Who wins? -->
+  <rect x="120" y="198" width="160" height="16" rx="8" fill="#f59e0b" opacity="0.08"/>
+  <text x="200" y="210" text-anchor="middle" fill="#d97706" font-size="8" font-weight="700" font-family="system-ui">Which AI assistant is better?</text>
 </svg>
