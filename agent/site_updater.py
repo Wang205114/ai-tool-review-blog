@@ -50,7 +50,13 @@ def update_index(articles: list[dict]) -> None:
         thumb = article.get("thumb_svg", f"{filename.replace('.html', '')}-thumb.svg")
         read_time = max(8, article.get("word_count", 2000) // 200)
         today = str(date.today())
-        desc = f"A detailed review and comparison of {', '.join(article['tools'][:3])}."
+        article_type = article.get("article_type", "comparison")
+        if article_type == "news_analysis":
+            desc = f"Analysis: {title} and what it means for your AI workflow."
+        elif article_type == "guide":
+            desc = f"A practical guide to choosing and using AI tools: {title}."
+        else:
+            desc = f"A detailed review and comparison of {', '.join(article.get('tools', [])[:3])}."
         featured_class = " featured" if i < 2 else ""
 
         cards_html += f"""          <article class="article-card{featured_class}">

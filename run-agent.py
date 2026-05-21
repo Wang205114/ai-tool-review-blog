@@ -120,8 +120,9 @@ def main():
 """)
         for a in articles:
             eprint(f"     - {a['title']}")
-            print(f"       File: {a['path']} ({a.get('word_count', 0)} words)")
-            print(f"       Charts: {a['thumb_svg']}, {a['comparison_svg']}, {a['pricing_svg']}")
+            a_type = a.get('article_type', 'comparison')
+            print(f"       File: {a['path']} ({a.get('word_count', 0)} words) [{a_type}]")
+            print(f"       Charts: {a['thumb_svg']}{', ' + a.get('comparison_svg', '') + ', ' + a.get('pricing_svg', '') if a_type == 'comparison' else ', (no comparison charts)'}")
 
         print(f"""
   {'='*60}

@@ -8,7 +8,7 @@ load_dotenv()
 ROOT = Path(__file__).resolve().parent.parent
 
 SITE = {
-    "name": "AI Tool Guide",
+    "name": "KnowAITool",
     "domain": "knowaitool.com",
     "canonical_base": "https://knowaitool.com",
 }

@@ -179,6 +179,7 @@ def run(articles: list[dict]) -> list[str]:
         title = article["title"]
         category = article["category"]
         tools = article["tools"]
+        article_type = article.get("article_type", "comparison")
         filename = article["filename"].replace(".html", "")
 
         # 1. Thumbnail SVG
@@ -188,6 +189,11 @@ def run(articles: list[dict]) -> list[str]:
             f.write(thumb)
         generated.append(f"{filename}-thumb.svg")
         print(f"     [OK] Thumbnail: {filename}-thumb.svg")
+
+        # Skip comparison and pricing SVGs for non-comparison article types
+        if article_type in ("news_analysis", "guide"):
+            print(f"     [SKIP] Comparison + Pricing charts (article_type={article_type})")
+            continue
 
         # 2. Comparison SVG
         comp = generate_comparison_svg(title, category, tools, filename)

@@ -49,30 +49,40 @@ def call_deepseek(prompt: str, max_tokens: int = 6000) -> str:
 
 
 def build_prompt(topic: dict, article_num: int, today: str) -> str:
-    """Build the prompt for article generation."""
+    """Build the prompt for article generation, supporting multiple article types."""
     title = topic["title"]
     category = topic["category"]
     kw = topic["keywords"]
-    tools = ", ".join(topic["tools_covered"])
+    tools = ", ".join(topic.get("tools_covered", []))
+    article_type = topic.get("article_type", "comparison")
     filename = slugify(title)
 
-    return f"""Generate a complete HTML article for {SITE['name']} ({SITE['domain']}) about: {title}
-
-Category: {category}
-Primary keyword: {kw}
-Tools covered: {tools}
-
-Today's date: {today}
-
-## Article Requirements
-
-**Title tag:** {title} | AI Tool Guide
-**Meta description:** Under 155 characters, include primary keyword
-**Canonical URL:** https://{SITE['domain']}/posts/{filename}
-
-**Word count:** 1800-2500 words
-
-**Article structure:**
+    # Build structure section based on article type
+    if article_type == "news_analysis":
+        structure_section = """**Article structure:**
+1. H1 title with primary keyword
+2. Introduction (what happened, why it matters to readers, ~120 words)
+3. Detailed analysis of each announcement (300-400 words each):
+   - What was announced
+   - What it actually means for users' daily workflow
+   - How it compares to existing alternatives
+   - Potential drawbacks or limitations
+4. Implications section: how these announcements affect the current AI tool landscape
+5. What to do next (practical recommendations for readers)
+6. FAQ (4-5 questions about the announcements and their impact)
+7. Conclusion with forward-looking takeaway"""
+    elif article_type == "guide":
+        structure_section = """**Article structure:**
+1. H1 title with primary keyword
+2. Introduction (why this topic matters, ~100 words)
+3. Prerequisites or background section
+4. Step-by-step guide or detailed breakdown (600-1000 words)
+5. Tips and best practices
+6. Common mistakes to avoid
+7. FAQ (4-5 questions)
+8. Conclusion with recommendations"""
+    else:  # comparison (default)
+        structure_section = """**Article structure:**
 1. H1 title with primary keyword
 2. Introduction paragraph (describe user pain point, ~100 words)
 3. Quick comparison table (Tool | Free Tier | Paid Plan | Best For)
@@ -87,7 +97,32 @@ Today's date: {today}
 5. How to choose section
 6. FAQ (5 questions)
 7. Conclusion and recommendation
-8. Related articles section
+8. Related articles section"""
+
+    # Build image line based on article type
+    if article_type == "news_analysis":
+        image_line = f'- <figure class="figure-img"> for images (src="../assets/{filename.replace(".html","")}-thumb.svg" as lead image)'
+    else:
+        image_line = f'- <figure class="figure-img"> for images (src="../assets/{filename.replace(".html","")}-comparison.svg")'
+
+    return f"""Generate a complete HTML article for {SITE['name']} ({SITE['domain']}) about: {title}
+
+Category: {category}
+Primary keyword: {kw}
+Article type: {article_type}
+Tools covered: {tools}
+
+Today's date: {today}
+
+## Article Requirements
+
+**Title tag:** {title} | {SITE['name']}
+**Meta description:** Under 155 characters, include primary keyword
+**Canonical URL:** https://{SITE['domain']}/posts/{filename}
+
+**Word count:** 1800-2500 words
+
+{structure_section}
 
 ## HTML Requirements
 
@@ -97,17 +132,16 @@ Do NOT wrap the output in markdown code fences or backticks.
 Output raw HTML only.
 
 Use these CSS classes from the site stylesheet:
-- <div class="comparison-table-wrap"><table class="comparison-table"> for quick comparison tables
+- <div class="comparison-table-wrap"><table class="comparison-table"> for comparison tables
 - <div class="key-takeaway"> for key takeaways
 - <div class="pros-cons"> with pros and cons divs
 - <div class="score-meter"> with score-label, score-bar-bg, score-bar-fill, score-value
 - <span class="check">&#10003;</span> and <span class="cross">&#10007;</span>
-- <figure class="figure-img"> for images (src="../assets/{filename.replace('.html','')}-comparison.svg")
+{image_line}
 - <div class="disclosure"><strong>Affiliate Disclosure:</strong>
 - <section class="author-box info-block">
 
-Include a pricing table row for each tool with exact dollar prices.
-Use genuine, specific observations about each tool.
+Include specific, genuine observations in each section.
 Include 1800-2500 words total.
 Internal links should use href="../posts/filename.html" format.
 """
@@ -129,6 +163,7 @@ def build_full_html(article_body: str, topic: dict, today: str) -> str:
     title = topic["title"]
     category = topic["category"]
     filename = slugify(title)
+    article_type = topic.get("article_type", "comparison")
     cat_label = category
 
     from agent.config import EXISTING_POSTS, EXISTING_TITLES
@@ -174,11 +209,11 @@ def build_full_html(article_body: str, topic: dict, today: str) -> str:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>__TITLE__ | __SITE_NAME__</title>
-  <meta name="description" content="A detailed comparison of AI tools covering features, pricing, pros and cons, and workflow fit.">
+  <meta name="description" content="__META_DESC__">
   <link rel="canonical" href="https://__DOMAIN__/posts/__FILENAME__">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="__OG_TYPE__">
   <meta property="og:title" content="__TITLE__">
-  <meta property="og:description" content="Compare AI tools across features, pricing, and real-world performance.">
+  <meta property="og:description" content="__OG_DESC__">
   <meta property="og:url" content="https://__DOMAIN__/posts/__FILENAME__">
   <meta property="og:image" content="https://__DOMAIN__/assets/__THUMB__">
   <link rel="stylesheet" href="../css/style.css">
@@ -187,7 +222,7 @@ def build_full_html(article_body: str, topic: dict, today: str) -> str:
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "__TITLE__",
-    "description": "A detailed comparison of AI tools covering features, pricing, pros and cons, and workflow fit.",
+    "description": "__JSONLD_DESC__",
     "datePublished": "__TODAY__",
     "dateModified": "__TODAY__",
     "author": {
@@ -240,7 +275,7 @@ def build_full_html(article_body: str, topic: dict, today: str) -> str:
 <body>
   <header class="site-header">
     <div class="container nav-shell">
-      <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="140" height="32" style="display:block"></a>
+      <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="175" height="40" style="display:block"></a>
       <nav class="site-nav" data-site-nav aria-label="Primary navigation">
         <a href="/">Home</a>
         <a href="/category">Categories</a>
@@ -337,7 +372,7 @@ __RELATED_ARTICLES__          </div>
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="140" height="32" style="display:block"></a>
+        <a class="brand" href="/"><img src="../assets/logo.svg" alt="KnowAITool" width="175" height="40" style="display:block"></a>
         <p class="muted">Independent AI tool reviews, comparisons, and buying guides for readers who need clarity before they spend.</p>
       </div>
       <div class="footer-links">
@@ -377,6 +412,24 @@ __RELATED_ARTICLES__          </div>
 
     # Replace placeholders
     thumb_filename = filename.replace(".html", "") + "-thumb.svg"
+
+    # Article-type-specific metadata
+    if article_type == "news_analysis":
+        meta_desc = f"Analysis of {title}: what the announcements mean for your workflow and how they compare to existing AI tools."
+        og_desc = f"{title} — practical impact analysis for AI tool users."
+        og_type = "article"
+        jsonld_desc = f"Analysis of recent AI announcements and their practical impact on daily workflows."
+    elif article_type == "guide":
+        meta_desc = f"A practical guide to {kw}. Step-by-step advice and best practices for AI tool users."
+        og_desc = f"Practical guide: {title}."
+        og_type = "article"
+        jsonld_desc = f"A practical guide covering {kw} with actionable advice."
+    else:  # comparison
+        meta_desc = f"A detailed comparison of AI tools covering features, pricing, pros and cons, and workflow fit."
+        og_desc = f"Compare AI tools across features, pricing, and real-world performance."
+        og_type = "article"
+        jsonld_desc = f"A detailed comparison of AI tools covering features, pricing, pros and cons, and workflow fit."
+
     result = template
     result = result.replace("__TITLE__", title)
     result = result.replace("__SITE_NAME__", SITE["name"])
@@ -387,6 +440,10 @@ __RELATED_ARTICLES__          </div>
     result = result.replace("__TODAY__", today)
     result = result.replace("__READ_TIME__", str(read_time))
     result = result.replace("__THUMB__", thumb_filename)
+    result = result.replace("__META_DESC__", meta_desc)
+    result = result.replace("__OG_DESC__", og_desc)
+    result = result.replace("__OG_TYPE__", og_type)
+    result = result.replace("__JSONLD_DESC__", jsonld_desc)
     result = result.replace("__RELATED_ARTICLES__", related_html)
     return result
 
@@ -458,7 +515,8 @@ def generate_article(topic: dict, article_num: int) -> dict | None:
         "title": title,
         "filename": filename,
         "category": topic["category"],
-        "tools": topic["tools_covered"],
+        "article_type": topic.get("article_type", "comparison"),
+        "tools": topic.get("tools_covered", []),
         "word_count": word_count,
         "path": f"drafts/{filename}",
         "thumb_svg": f"{filename.replace('.html', '')}-thumb.svg",

@@ -80,8 +80,8 @@ Existing articles on the site:
 From the search results below, select 3 topics that:
 1. Are NOT already covered by existing articles
 2. Have high search volume / trending potential
-3. Would drive organic traffic as comparison or review articles
-4. Are about specific AI tools (not general AI news)
+3. Would drive organic traffic to the site
+4. Can be tool comparisons, news analysis (product launches, major updates), or practical guides
 
 Search results:
 {snippets}
@@ -92,6 +92,7 @@ Return a JSON array of exactly 3 topic objects:
     "title": "SEO-optimized article title with primary keyword",
     "keywords": "primary keyword phrase for SEO",
     "category": "AI Writing | AI Image | AI Coding | AI Video | AI Productivity | AI SEO | AI Assistants | AI Marketing",
+    "article_type": "comparison" if comparing multiple tools, use "news_analysis" for news/launch impact analysis, or "guide" for how-to,
     "angle": "The unique angle for this article",
     "tools_covered": ["Tool1", "Tool2", ...],
     "search_volume_estimate": "High | Medium | Low",
@@ -110,6 +111,7 @@ def fallback_topics() -> list[dict]:
             "title": "Cline vs Cursor vs Windsurf: Best AI Coding IDE 2026",
             "keywords": "AI coding IDE comparison 2026",
             "category": "AI Coding",
+            "article_type": "comparison",
             "angle": "Compare Cline, Cursor and Windsurf on code quality, features, and pricing for developers",
             "tools_covered": ["Cline", "Cursor", "Windsurf"],
             "search_volume_estimate": "High",
@@ -119,6 +121,7 @@ def fallback_topics() -> list[dict]:
             "title": "Perplexity AI vs Google Gemini: Best AI Search Engine 2026",
             "keywords": "AI search engine comparison 2026",
             "category": "AI Productivity",
+            "article_type": "comparison",
             "angle": "Compare Perplexity and Gemini on search accuracy, source quality, and research workflows",
             "tools_covered": ["Perplexity", "Google Gemini"],
             "search_volume_estimate": "High",
@@ -128,6 +131,7 @@ def fallback_topics() -> list[dict]:
             "title": "Suno AI vs Udio: Best AI Music Generator 2026",
             "keywords": "AI music generator comparison 2026",
             "category": "AI Video",
+            "article_type": "comparison",
             "angle": "Compare Suno and Udio on audio quality, style control, and pricing for creators",
             "tools_covered": ["Suno", "Udio"],
             "search_volume_estimate": "Medium",
