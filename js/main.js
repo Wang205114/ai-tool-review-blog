@@ -164,4 +164,93 @@ document.querySelectorAll("img[data-src]").forEach((img) => {
   img.addEventListener("load", () => img.removeAttribute("data-src"));
 });
 
-console.log("AI Tool Guide — loaded");
+// =============================================
+// Search overlay
+// =============================================
+(function searchOverlay() {
+  const toggle = document.querySelector("[data-search-toggle]");
+  if (!toggle) return;
+
+  // Create overlay HTML
+  const overlay = document.createElement("div");
+  overlay.className = "search-overlay";
+  overlay.setAttribute("data-search-overlay", "");
+  overlay.innerHTML =
+    '<div class="search-modal">' +
+      '<div class="search-input-wrap">' +
+        '<span class="search-icon">🔍</span>' +
+        '<input type="text" data-search-input placeholder="Search articles…" autocomplete="off">' +
+        '<button class="search-close" data-search-close type="button">&times;</button>' +
+      "</div>" +
+      '<div class="search-results" data-search-results></div>' +
+    "</div>";
+  document.body.appendChild(overlay);
+
+  const input = overlay.querySelector("[data-search-input]");
+  const resultsEl = overlay.querySelector("[data-search-results]");
+  const closeBtn = overlay.querySelector("[data-search-close]");
+  let index = null;
+
+  const open = () => {
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => input.focus(), 100);
+  };
+
+  const close = () => {
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+    input.value = "";
+    resultsEl.innerHTML = "";
+  };
+
+  const loadIndex = async () => {
+    if (index) return index;
+    try {
+      const res = await fetch("js/search.json");
+      index = await res.json();
+      return index;
+    } catch {
+      resultsEl.innerHTML = '<div class="search-empty">Search temporarily unavailable.</div>';
+      return [];
+    }
+  };
+
+  const search = async (query) => {
+    const q = query.toLowerCase().trim();
+    if (!q) { resultsEl.innerHTML = '<div class="search-empty">Start typing to search articles…</div>'; return; }
+    const data = await loadIndex();
+    const matches = data.filter(
+      (item) =>
+        item.title.toLowerCase().includes(q) ||
+        item.description.toLowerCase().includes(q) ||
+        item.category.toLowerCase().includes(q)
+    ).slice(0, 8);
+    if (matches.length === 0) {
+      resultsEl.innerHTML = '<div class="search-empty">No articles found for &quot;' + query + '&quot;.</div>';
+      return;
+    }
+    resultsEl.innerHTML = matches
+      .map(
+        (m) =>
+          '<a class="search-result-item" href="' + m.url + '">' +
+            '<div class="result-title">' + m.title + '</div>' +
+            '<span class="result-category">' + m.category + '</span>' +
+            '<div class="result-desc">' + m.description + '</div>' +
+          "</a>"
+      )
+      .join("");
+  };
+
+  // Events
+  toggle.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+    if ((e.ctrlKey || e.metaKey) && e.key === "k" && !overlay.classList.contains("is-open")) { e.preventDefault(); open(); }
+  });
+  input.addEventListener("input", () => search(input.value));
+})();
+
+console.log("KnowAITool — loaded");

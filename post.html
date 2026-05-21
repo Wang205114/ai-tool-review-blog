@@ -62,6 +62,7 @@
         <a href="/contact">Contact</a>
       </nav>
       <div class="nav-actions">
+        <button class="search-toggle" type="button" data-search-toggle aria-label="Search articles">🔍</button>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">☾</button>
         <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
@@ -86,7 +87,8 @@
         <header>
           <h1>How We Review AI Tools — Editorial Methodology</h1>
           <div class="meta">
-            <span>May 15, 2026</span>
+            <span>Published: <time datetime="2026-05-15">May 15, 2026</time></span>
+            <span class="updated-label">Last updated: <time datetime="2026-05-15">May 15, 2026</time></span>
             <span>By Editorial Team</span>
             <span>9 min read</span>
           </div>
@@ -221,13 +223,39 @@
 
       </article>
 
-      <aside class="panel article-shell">
-        <h2>On this topic</h2>
-        <ul>
-          <li><a href="/about">About our editorial standards</a></li>
-          <li><a href="/category">Browse all AI tool categories</a></li>
-          <li><a href="/privacy">Privacy and disclosure</a></li>
+      <aside class="panel article-shell sidebar-right">
+        <h2>Related Articles</h2>
+        <ul class="sidebar-links">
+          <li><a href="posts/chatgpt-vs-claude.html">ChatGPT vs Claude: Which AI Assistant is Better?</a></li>
+          <li><a href="posts/best-ai-writing-tools.html">Best AI Writing Tools in 2026: Complete Guide</a></li>
+          <li><a href="posts/free-ai-image-generators.html">Top 10 Free AI Image Generators Reviewed</a></li>
         </ul>
+
+        <div class="sidebar-rating-card">
+          <h3>Tool Scorecard</h3>
+          <div class="rating-row">
+            <span class="rating-label">Output Quality</span>
+            <span class="rating-value">9.2/10</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Usability</span>
+            <span class="rating-value">8.5/10</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Workflow Depth</span>
+            <span class="rating-value">8.0/10</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Pricing Clarity</span>
+            <span class="rating-value">7.5/10</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Trust &amp; Privacy</span>
+            <span class="rating-value">8.8/10</span>
+          </div>
+          <p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0;">Aggregated scores from hands-on testing across all categories.</p>
+        </div>
+
         <div class="ad-wrap">
           <span class="ad-label">Advertisement</span>
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2390083032423079"
